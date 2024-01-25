@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Lab02 - Scientific Calculator</title>
+
+	<link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+	<!-- your app code goes here -->
+
+	<div class="wrapper">
+
+		<div class="calc">
+			<div class="top">
+				<input type="text" class="screen" readonly disabled>
+			</div>
+			<div class="keyboard">
+
+				<div>
+					<div class="cb row" style="background-color: white;outline: white;"></div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="notImplemented()">MC</div>
+					<div class="cb operator" onclick="notImplemented()">MR</div>
+					<div class="cb operator" onclick="notImplemented()">M+</div>
+					<div class="cb operator" onclick="notImplemented()">M-</div>
+					<div class="cb operator" onclick="notImplemented()">MS</div>
+					<div class="cb operator" onclick="notImplemented()">M<sup>-</sup></div>
+				</div>
+
+				<div>
+					<div class="cb row" style="background-color: white;outline: white;"></div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="notImplemented()">2<sup>nd</sup></div>
+					<div class="cb operator" onclick="appendChar('pi')">&pi;</div>
+					<div class="cb operator" onclick="appendChar('e')">e</div>
+					<div class="cb operator" onclick="deleteAll()">C</div>
+					<div class="cb operator" onclick="deleteLastChar()">&#9003;</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('**2')">x<sup>2</sup></div>
+					<div class="cb operator" onclick="appendChar('1/')">1/<sub>x</sub></div>
+					<div class="cb operator" onclick="appendChar('abs')">|x|</div>
+					<div class="cb operator" onclick="appendChar('exp')">exp</div>
+					<div class="cb operator" onclick="appendChar('mod')">mod</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('sqrt')">&sup2;&radic;x</div>
+					<div class="cb operator" onclick="appendChar('lpar')">&lpar;</div>
+					<div class="cb operator" onclick="appendChar('rpar')">&rpar;</div>
+					<div class="cb operator" onclick="appendChar('factorial')">n!</div>
+					<div class="cb operands" onclick="appendChar('/')">&divide;</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('**')">x<sup>Y</sup></div>
+					<div class="cb number" onclick="appendChar('7')">7</div>
+					<div class="cb number" onclick="appendChar('8')">8</div>
+					<div class="cb number" onclick="appendChar('9')">9</div>
+					<div class="cb operands" onclick="appendChar('*')">×</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('10**')">10<sup>X</sup></div>
+					<div class="cb number" onclick="appendChar('4')">4</div>
+					<div class="cb number" onclick="appendChar('5')">5</div>
+					<div class="cb number" onclick="appendChar('6')">6</div>
+					<div class="cb operands" onclick="appendChar('-')">-</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('log')">log<sub>10</sub></div>
+					<div class="cb number" onclick="appendChar('1')">1</div>
+					<div class="cb number" onclick="appendChar('2')">2</div>
+					<div class="cb number" onclick="appendChar('3')">3</div>
+					<div class="cb operands" onclick="appendChar('+')">+</div>
+				</div>
+
+				<div class="crow">
+					<div class="cb operator" onclick="appendChar('ln')">ln</div>
+					<div class="cb number" onclick="plusMinus()">+/-</div>
+					<div class="cb number" onclick="appendChar('0')">0</div>
+					<div class="cb number" onclick="appendChar('.')">.</div>
+					<div class="cb enter" onclick="solve()">=</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-----my custom js code------>
+	<script src="script.js"></script>
+
+	<!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
+	<script>
+
+		///////////////////////////////////////////////////////
+		// implement this functions in order to use private API
+		const sendPrivateApiRequest = async () => {
+			// your code here:
+			// sendRequestToParent({ cat: 'getAssets' })
+		}
+
+		const acceptPrivateApiResponse = async data => {
+			// process received data here:
+			// console.log(data)
+		}
+
+		// use this in order to send on document load
+		document.addEventListener('DOMContentLoaded', () => {
+			// your code here:
+			//sendRequestToParent({ method: 'getAssets' })
+		})
+	</script>
+	<script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+
+</html>
